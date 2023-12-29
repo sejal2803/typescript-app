@@ -26,7 +26,8 @@ const CreateBooks = () => {
   })
 
   const handleSubmit =(e:React.ChangeEvent<HTMLFormElement>)=>{
-    const {title, author,price} = formvalue
+    e.preventDefault()
+    const {title, author,price} = formvalue;
     setBooks([...books,{id:Math.random(), title:title, author:author,price:price }])
   }
 
